@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form elements part3 Textarea,filedset,legend,select,option</title>
+    <script>
+        function sayHello(){
+            alert("hello html");
+        }
+    </script>
+    <style>
+        fieldset{background: #EFEFEF;padding: 10px;border:1px solid #CCC; margin-bottom: 20px}
+        legend{background: #FFF;border: 1px solid #CCC;padding:10px}
+    </style>
+</head>
+<body>
+    <form name="register">
+    <fieldset>
+        <legend>personal information</legend>
+        <label>Username</label>
+        <input type="text" name="username"value="">
+        <br>
+        <label>password</label>
+        <input type="password" name="passeword" maxlength="10">
+        <br>
+        <labe>Your messsage :</label><br>
+        <textarea classs ="our-text" rows="6" cols="50" readonly>this note you can't edit</textarea>
+        <br>
+        <label>upload your cv:</label>
+        <input type="file">
+        <br>
+        <input type="checkbox"><label>Remember me</label>
+    </fieldset>
+    <fieldset>
+        <legend>your favorite</legend>
+        <label>choose your browser</label><br>
+        <input type="radio" name="browser" value="chrome"><label>google chrome</label><br>
+        <input type="radio" name="browser" value="fireFox"><label>mozilla firefox</label><br>
+        <input type="radio" name="browser" value="opera"><label>opera</label>
+        <br>
+        <label>choose your mobile</label><br>
+        <input type="radio" name="mobile" value="iphone"><label>iphone</label><br>
+        <input type="radio" name="mobile" value="samsung"><label>samsung</label><br>
+        <input type="radio" name="mobile" value="nokia"><label>nokia</label>
+    </fieldset>
+    <fieldset>
+        <legend>send option</legend>
+        <select name="time" size="4" multiple>
+        <optgroup label="Near Time">
+            <option disabled>now</option>
+            <option selected>tomorrow</option>
+            <option value="3">after a week</option>
+        </optgroup>
+        <optgroup label="Far Time">
+            <option value="4">year</option>
+            <option value="5">10 year</option>
+            <option value="6">20 year</option>
+        <optgroup>
+        </select>
+        <input type="button" name="say hello" value="say hello" onclick="sayHello()">
+        <input type="submit" value="sign up">
+        <input type="reset" value="restore default">
+    </fieldset>
+    </form>
+</body>
+</html>
